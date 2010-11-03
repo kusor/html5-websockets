@@ -1,0 +1,3 @@
+[submodule "web-socket-ruby"]
+	path = web-socket-ruby
+	url = git@github.com:kusor/web-socket-ruby.git
