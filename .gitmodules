@@ -1,3 +1,6 @@
 [submodule "web-socket-ruby"]
 	path = web-socket-ruby
 	url = git@github.com:kusor/web-socket-ruby.git
+[submodule "nws"]
+	path = nws
+	url = git@github.com:kusor/nws-chat.git
