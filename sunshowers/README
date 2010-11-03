@@ -1,0 +1,12 @@
+# Rainbows:
+
+# Run:
+/usr/local/bin/rainbows19 -c ./rainbows.conf ./app.ru -D
+# Stop:
+kill -quit `cat rainbows-master.pid`
+# Since it's not working?, ...:
+kill -9 `cat rainbows-master.pid`
+# Restart:
+kill -quit `hup rainbows-master.pid`
+
+ruby19 -d web-socket-ruby/lib/web_socket.rb client ws://127.0.0.1:8003/chat 75

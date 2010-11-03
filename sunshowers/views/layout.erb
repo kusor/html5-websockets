@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML5 WebSockets, Ruby and NodeJS - Sunshowers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="/">HTML5 WebSockets, Ruby and NodeJS - Sunshowers</a></h1>
+    </div>
+    <div id="sidebar">
+      <div class="vertical_divider"></div>
+      <ul id="categories">
+        <li class="category">
+          <h1 class="welcome current">Connected Users</h1>
+        </li>
+        <li class="category">
+          <ul>
+            <li>Foo</li>
+            <li>Bar</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+
+    $(function(){
+			$('chatbox').submit(function (){
+				$(this).submit();
+				return false;
+			});
+      // var headerHeight = $("#header").height();
+      // var offsets = [];
+      // var current = -1;
+      //
+      // function endpoint(scrollDistance){
+      //   if(scrollDistance < offsets[0]){
+      //     return -1
+      //   }else{
+      //     for (var id=offsets.length; id > 0; id--){
+      //       if (scrollDistance > offsets[id -1]){
+      //         return id -1;
+      //         break;
+      //       }
+      //     }
+      //   }
+      // }
+      //
+      // $("div.endpoint:not(.fixed)").each(function(i){
+      //   offsets.push($(this).offset().top - headerHeight)}
+      // );
+      //
+      //
+      // $("#content").scroll(function() {
+      //   var scrollDistance = $("#content").attr('scrollTop');
+      //   var now = endpoint(scrollDistance);
+      //   if (now !== current){
+      //     current = now;
+      //     if (current < 0){
+      //       $(".category li, h1.welcome").removeClass("current");
+      //       $("h1.welcome").addClass("current");
+      //       $("div.fixed").hide();
+      //     }else{
+      //
+      //       var el = $($("div.endpoint:not(.fixed)")[current]);
+      //       var action = el.children("h2").html();
+      //       var verb = el.children("a").html();
+      //
+      //       $(".category li, h1.welcome").removeClass("current");
+      //
+      //       //$("li[data-endpoint|="+ action +"]").addClass("current");
+      //       $("a[href|=/#"+verb+"-"+ action +"]").parent().addClass("current");
+      //
+      //       $(".fixed").show().html(el.html());
+      //     }
+      //   }
+      // });
+
+    })
+    </script>
+  </body>
+</html>

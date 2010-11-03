@@ -1,0 +1,55 @@
+<h1>Welcome</h1>
+
+<div class="basic_info">
+  <h4 style="margin-bottom:10px">All API calls start with</h4>
+  <pre class="base important">  What is so important?</pre>
+
+  <h4>Notes regarding this documentation</h4>
+  <p>The examples below were produced by using <a href="http://github.com/micha/resty" target="_blank">Resty</a>,
+    a tiny script wrapper for curl. It provides a nice and clean syntax for accessing
+    REST services.</p>
+</div>
+
+<h1>Chat</h1>
+
+<div class="endpoint">
+  <!-- <h2>/hostnames</h2>
+  <a name="GET-/hostnames">GET</a> -->
+</div>
+
+<dl id="chat-messages">
+  <dt>Foo:</dt>
+  <dd>What's up?</dd>
+  <dt>Bar:</dt>
+  <dd>Heya!</dd>
+  <dd>How are things going?</dd>
+</dl>
+
+<form action="/ws" method="post" id="chatbox">
+  <label for="typesomething">
+    <input type="text" name="write" id="write" />
+  </label>
+</form>
+
+<p>Query interface for hostnames. Clients can query hostnames by <strong>fqdn</strong>
+  or by <strong>ip_address</strong>. The fqdn (Fully Qualified Domain Name) can be
+  provided as a 'wildcard' name, so the API will do the equivalent of a 'LIKE'
+  clause when querying the database. API will return <strong>200</strong> or
+  <strong>204</strong> if no content matches the query conditions.</p>
+
+<h5>example request: lookup a hostname by IP address</h5>
+<pre class="req">
+  $ GET /hostnames -d ip_address=192.168.1.1
+</pre>
+<h5>response</h5>
+<pre>
+  [
+    {
+      "ip_address": "192.168.1.1",
+      "customer_id": 1,
+      "fqdn": "bar.bar",
+      "id": 9
+    }
+  ]
+</pre>
+
