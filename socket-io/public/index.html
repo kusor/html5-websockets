@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML5 WebSockets, Ruby and NodeJS - Socket.IO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <script src="/javascripts/json.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.socket.io/stable/socket.io.js"></script>
+
+  </head>
+  <body>
+    <div id="header">
+      <h1><a href="/">HTML5 WebSockets - Socket.IO</a></h1>
+    </div>
+    <div id="sidebar">
+      <div class="vertical_divider"></div>
+      <ul id="categories">
+        <li class="category" id="stats"><h2 class="stats">RSS: 0MB, Uptime: 00:00</h2></li>
+        <li class="category">
+          <h1 class="welcome current">Connected Users</h1>
+        </li>
+        <li class="category">
+          <ul id="roaster">
+            <li>Foo</li>
+            <li>Bar</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="content">
+      <div id="log"></div>
+      <div id="controls">
+        <input type="text" id="entry"/>
+        <input type="button" value="connect" id="connect">
+        <input type="button" value="disconnect" id="disconnect" disabled="disabled">
+      </div>
+      <script type="text/javascript" charset="utf-8" src="/javascripts/socket-io.js"></script>
+    </div>
+  </body>
+</html>
