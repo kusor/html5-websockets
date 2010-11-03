@@ -1,0 +1,2 @@
+nohup thin19 -C thin.yml -R server.ru -c ./ start
+nohup thin19 -C thin.yml -R server.ru -c ./ stop
